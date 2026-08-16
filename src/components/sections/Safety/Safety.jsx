@@ -8,7 +8,7 @@ import { Star, Heart } from '../../ui/Decor/Decor.jsx'
 import styles from './Safety.module.css'
 
 const cctvImage = {
-  src: '', // '/images/cctv/control-room.jpg'
+  src: '/images/cctv/IMG_0700.jpg',
   emoji: '🖥️',
   label: 'CCTV Control Room',
 }
