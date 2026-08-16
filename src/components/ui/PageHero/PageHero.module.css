@@ -1,0 +1,159 @@
+.hero {
+  position: relative;
+  background: linear-gradient(160deg, #ffe9a8 0%, #ffd93d 55%, #ffb84d 100%);
+  padding: clamp(6.5rem, 12vw, 9rem) 0 clamp(4.5rem, 8vw, 6.5rem);
+  overflow: hidden;
+  text-align: center;
+}
+
+.blobBlob,
+.blobBlob2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  opacity: 0.5;
+}
+.blobBlob {
+  width: 380px;
+  height: 380px;
+  background: rgba(255, 255, 255, 0.35);
+  top: -120px;
+  left: -100px;
+  animation: float 9s ease-in-out infinite;
+}
+.blobBlob2 {
+  width: 300px;
+  height: 300px;
+  background: rgba(118, 146, 255, 0.25);
+  bottom: -80px;
+  right: -80px;
+  animation: float 11s ease-in-out infinite reverse;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.85);
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #7a5c00;
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--r-pill);
+  box-shadow: var(--shadow-sm);
+}
+
+.title {
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  font-weight: 800;
+  color: #3d2f00;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+.subtitle {
+  max-width: 620px;
+  color: rgba(61, 47, 0, 0.85);
+  font-size: clamp(0.98rem, 1.6vw, 1.12rem);
+  font-weight: 600;
+}
+
+.crumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: rgba(61, 47, 0, 0.7);
+}
+.crumbs a {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0.3rem 0.9rem;
+  border-radius: var(--r-pill);
+  transition: transform var(--speed-fast) var(--ease-spring);
+}
+.crumbs a:hover {
+  transform: translateY(-2px);
+  background: #ffffff;
+}
+.crumbSep {
+  margin-inline: 0.3rem;
+}
+
+.wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+/* Decorations */
+.decorSun {
+  position: absolute;
+  top: 3rem;
+  right: 7%;
+  width: 84px;
+  height: 84px;
+  z-index: 1;
+}
+.decorCloud1 {
+  position: absolute;
+  top: 4.5rem;
+  left: 6%;
+  width: 150px;
+  z-index: 1;
+  animation-duration: 80s;
+}
+.decorCloud2 {
+  position: absolute;
+  top: 12rem;
+  left: 30%;
+  width: 110px;
+  z-index: 1;
+  opacity: 0.8;
+  animation-duration: 105s;
+  animation-delay: -30s;
+}
+.decorBalloon {
+  position: absolute;
+  top: 3.2rem;
+  left: 12%;
+  width: 48px;
+  z-index: 1;
+}
+.decorBalloon2 {
+  position: absolute;
+  bottom: 5rem;
+  right: 12%;
+  width: 40px;
+  z-index: 1;
+  animation-delay: 1.2s;
+}
+.decorStar {
+  position: absolute;
+  top: 8rem;
+  right: 28%;
+}
+.decorStar2 {
+  position: absolute;
+  top: 14rem;
+  left: 22%;
+}
+
+@media (max-width: 768px) {
+  .decorCloud2,
+  .decorBalloon2,
+  .decorStar2 {
+    display: none;
+  }
+}

@@ -1,0 +1,108 @@
+.wrap {
+  background: var(--bg);
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--soft-blue) 0%, var(--lavender) 60%, #ff8ad3 130%);
+  border-radius: var(--r-xl);
+  padding: clamp(2.8rem, 6vw, 4.5rem) clamp(1.6rem, 5vw, 4rem);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.25), transparent 42%);
+}
+
+.eyebrow {
+  position: relative;
+  background: rgba(255, 255, 255, 0.92);
+  color: #5a4bd6;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 0.45rem 1.3rem;
+  border-radius: var(--r-pill);
+  box-shadow: var(--shadow-sm);
+  z-index: 2;
+}
+
+.title {
+  position: relative;
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  color: #ffffff;
+  max-width: 700px;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.08);
+  z-index: 2;
+}
+
+.subtitle {
+  position: relative;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 620px;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.actions {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.6rem;
+  z-index: 2;
+}
+
+/* Decor */
+.cloud {
+  position: absolute;
+  top: 2rem;
+  left: -3rem;
+  width: 170px;
+  animation-duration: 75s;
+}
+.cloud2 {
+  position: absolute;
+  bottom: 3rem;
+  right: -3rem;
+  width: 200px;
+  animation-duration: 95s;
+  animation-delay: -40s;
+}
+.balloon1 {
+  position: absolute;
+  top: 1.6rem;
+  right: 8%;
+  width: 46px;
+}
+.balloon2 {
+  position: absolute;
+  bottom: 1.8rem;
+  left: 7%;
+  width: 40px;
+  animation-delay: 1.4s;
+}
+.star1 {
+  position: absolute;
+  top: 2.4rem;
+  left: 12%;
+}
+.star2 {
+  position: absolute;
+  bottom: 2.2rem;
+  right: 12%;
+}
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 4%;
+}

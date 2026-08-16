@@ -1,0 +1,124 @@
+.section {
+  background: var(--bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+}
+
+.card {
+  position: relative;
+  border-radius: var(--r-xl);
+  padding: clamp(2rem, 4vw, 2.8rem);
+  color: #3d2f00;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--speed-base) var(--ease-spring), box-shadow var(--speed-base);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 88% 12%, rgba(255, 255, 255, 0.5), transparent 40%);
+}
+
+.vision {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--orange) 100%);
+  border: 3px solid #ffe89a;
+}
+
+.mission {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--soft-blue) 100%);
+  color: #ffffff;
+  border: 3px solid #d9fff6;
+}
+
+.emoji {
+  font-size: 3rem;
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  animation: float-soft 5s ease-in-out infinite;
+  filter: drop-shadow(0 8px 14px rgba(45, 55, 72, 0.18));
+}
+
+.title {
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.points {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 0.3rem;
+}
+.point {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 0.97rem;
+}
+.point::before {
+  content: '✔';
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  color: #0b7a63;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* Floating deco inside cards */
+.deco {
+  position: absolute;
+  font-size: 3.4rem;
+  opacity: 0.16;
+  transform: rotate(12deg);
+  z-index: 0;
+  animation: float 7s ease-in-out infinite;
+}
+.deco2 {
+  position: absolute;
+  font-size: 2.6rem;
+  opacity: 0.18;
+  transform: rotate(-10deg);
+  bottom: 1.4rem;
+  right: 1.2rem;
+  animation: float 8s ease-in-out infinite;
+  animation-delay: 1s;
+  z-index: 0;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

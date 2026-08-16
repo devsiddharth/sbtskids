@@ -1,0 +1,119 @@
+.section {
+  background: var(--bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.mapCard {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 5px solid #ffffff;
+  box-shadow: var(--shadow-md);
+  min-height: 380px;
+  background: var(--soft-blue-soft);
+}
+
+.mapFrame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: saturate(1.1);
+}
+
+.mapBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.95);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--text);
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--r-pill);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.infoCard {
+  background: #ffffff;
+  border-radius: var(--r-md);
+  padding: 1.5rem 1.3rem;
+  border: 3px solid #f3ead8;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--speed-base) var(--ease-spring), box-shadow var(--speed-base);
+}
+.infoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.infoIcon {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+  font-size: 1.5rem;
+  margin-bottom: 0.9rem;
+  background: var(--primary-soft);
+}
+.infoCard:nth-child(2) .infoIcon {
+  background: var(--accent-soft);
+}
+.infoCard:nth-child(3) .infoIcon {
+  background: var(--lavender-soft);
+}
+.infoCard:nth-child(4) .infoIcon {
+  background: var(--orange-soft);
+}
+
+.infoTitle {
+  font-size: 1.02rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+}
+
+.infoText {
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 600;
+  word-break: break-word;
+}
+.infoText a {
+  color: var(--soft-blue);
+}
+.infoText a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .info {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .info {
+    grid-template-columns: 1fr;
+  }
+}

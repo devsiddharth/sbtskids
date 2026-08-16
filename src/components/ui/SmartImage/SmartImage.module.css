@@ -1,0 +1,38 @@
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  border-radius: var(--ph-radius);
+  background:
+    radial-gradient(circle at 22% 20%, rgba(255, 255, 255, 0.55) 0%, transparent 45%),
+    linear-gradient(135deg, color-mix(in srgb, var(--ph-color) 32%, #ffffff) 0%, var(--ph-color) 100%);
+  border: 3px dashed color-mix(in srgb, var(--ph-color) 55%, #ffffff);
+  padding: 1rem;
+  text-align: center;
+  transition: transform var(--speed-base) var(--ease-spring);
+}
+
+.placeholderEmoji {
+  font-size: 2.6rem;
+  filter: drop-shadow(0 6px 12px rgba(45, 55, 72, 0.18));
+  animation: float-soft 3.4s ease-in-out infinite;
+}
+
+.placeholderLabel {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: rgba(45, 55, 72, 0.75);
+  max-width: 90%;
+}

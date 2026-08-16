@@ -1,0 +1,259 @@
+.footer {
+  position: relative;
+  background: linear-gradient(170deg, #5a6ff0 0%, #7692ff 45%, #b197fc 100%);
+  color: #ffffff;
+  padding-top: 4.5rem;
+  overflow: hidden;
+  border-radius: var(--r-xl) var(--r-xl) 0 0;
+  margin-top: 2rem;
+}
+
+/* Decorative layer */
+.decors {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.cloud {
+  position: absolute;
+  top: 3rem;
+  left: 8%;
+  width: 150px;
+  animation-duration: 90s;
+}
+.balloon1 {
+  position: absolute;
+  top: 4rem;
+  right: 10%;
+  width: 46px;
+}
+.balloon2 {
+  position: absolute;
+  bottom: 8rem;
+  right: 24%;
+  width: 38px;
+  animation-delay: 1.6s;
+}
+.star1 {
+  position: absolute;
+  top: 6rem;
+  left: 30%;
+}
+.star2 {
+  position: absolute;
+  top: 12rem;
+  right: 8%;
+}
+.star3 {
+  position: absolute;
+  bottom: 10rem;
+  left: 12%;
+}
+.rainbow {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 5%;
+  width: 100px;
+  opacity: 0.8;
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.1fr 1.2fr;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+/* Brand */
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+.logoRow svg {
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.18));
+}
+.name {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.tagline {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.about {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.96rem;
+  max-width: 320px;
+}
+
+.socials {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+}
+.social {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-size: 1.05rem;
+  transition:
+    transform var(--speed-fast) var(--ease-spring),
+    background var(--speed-fast);
+}
+.social:hover {
+  background: var(--primary);
+  color: #3d2f00;
+  transform: translateY(-4px) rotate(-6deg);
+}
+
+/* Columns */
+.colTitle {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 1.1rem;
+  position: relative;
+  padding-bottom: 0.55rem;
+}
+.colTitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 42px;
+  height: 5px;
+  border-radius: var(--r-pill);
+  background: var(--primary);
+}
+
+.colLinks li,
+.contact li {
+  margin-bottom: 0.7rem;
+}
+.colLinks a,
+.contact a,
+.contact li {
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 600;
+  font-size: 0.97rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  transition:
+    color var(--speed-fast),
+    transform var(--speed-fast) var(--ease-spring);
+}
+.colLinks a:hover {
+  color: var(--primary);
+  transform: translateX(4px);
+}
+.contact a:hover {
+  color: var(--primary);
+}
+.contact svg {
+  font-size: 1.15rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.arrow {
+  color: var(--primary);
+  font-weight: 800;
+}
+
+/* Newsletter */
+.newsText {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.newsForm {
+  display: flex;
+  background: #ffffff;
+  border-radius: var(--r-pill);
+  padding: 0.3rem;
+  box-shadow: var(--shadow-md);
+}
+.newsForm input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  outline: none;
+}
+.newsForm button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--secondary), #ff8a5c);
+  color: #fff;
+  font-size: 1.15rem;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition: transform var(--speed-fast) var(--ease-spring);
+}
+.newsForm button:hover {
+  transform: scale(1.1) rotate(-12deg);
+}
+
+.subscribed {
+  background: rgba(255, 255, 255, 0.16);
+  border: 2px dashed var(--primary);
+  border-radius: var(--r-md);
+  padding: 0.9rem 1.1rem;
+  font-weight: 700;
+}
+
+/* Bottom bar */
+.bottom {
+  position: relative;
+  background: rgba(0, 0, 0, 0.14);
+  padding: 1.1rem 0;
+}
+.bottomInner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+.credits {
+  display: flex;
+  gap: 0.6rem;
+}
+.credits a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .rainbow,
+  .balloon2 {
+    display: none;
+  }
+}

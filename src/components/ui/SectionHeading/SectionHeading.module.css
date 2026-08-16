@@ -1,0 +1,91 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: clamp(2.2rem, 5vw, 3.5rem);
+  max-width: 720px;
+}
+
+.center {
+  align-items: center;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Eyebrow chip */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--primary-soft);
+  color: #6b4e00;
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  padding: 0.4rem 1.1rem;
+  border-radius: var(--r-pill);
+  border: 2px solid rgba(255, 217, 61, 0.6);
+  box-shadow: var(--shadow-sm);
+}
+
+.eyebrowEmoji {
+  font-size: 1rem;
+  animation: twinkle 2.6s ease-in-out infinite;
+}
+
+.title {
+  font-size: clamp(1.9rem, 4.2vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: clamp(0.98rem, 1.4vw, 1.08rem);
+  max-width: 600px;
+}
+
+/* Scribble divider */
+.scribble {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0.4rem;
+}
+
+.scribbleDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--secondary);
+  animation: bounce-soft 2.4s ease-in-out infinite;
+}
+.scribbleDot:last-child {
+  background: var(--soft-blue);
+  animation-delay: 0.4s;
+}
+
+.scribbleLine {
+  width: 90px;
+  height: 5px;
+  border-radius: var(--r-pill);
+  background: linear-gradient(90deg, var(--primary), var(--orange), var(--secondary));
+}
+
+/* Light variant (used on tinted/dark backgrounds) */
+.light .eyebrow {
+  background: rgba(255, 255, 255, 0.9);
+}
+.light .title,
+.light .subtitle {
+  color: #ffffff;
+}
+.light .subtitle {
+  color: rgba(255, 255, 255, 0.88);
+}

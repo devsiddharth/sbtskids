@@ -1,0 +1,25 @@
+.wrap {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.flip {
+  transform: rotate(180deg);
+}
+
+.svg {
+  width: 200%;
+  height: clamp(48px, 7vw, 96px);
+  display: block;
+}
+
+.wavePath {
+  animation: wave-move 14s linear infinite;
+}
+
+.wavePathSlow {
+  animation: wave-move 22s linear infinite reverse;
+}

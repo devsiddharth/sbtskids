@@ -1,0 +1,107 @@
+.section {
+  background: var(--bg);
+}
+
+.swiper {
+  padding-bottom: 3.2rem;
+}
+
+.card {
+  position: relative;
+  background: var(--tint, var(--primary-soft));
+  border-radius: var(--r-lg);
+  padding: 2rem 1.6rem 1.6rem;
+  border: 3px solid rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: transform var(--speed-base) var(--ease-spring), box-shadow var(--speed-base);
+  min-height: 300px;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.quoteMark {
+  position: absolute;
+  top: 0.2rem;
+  right: 1.1rem;
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.75);
+  user-select: none;
+}
+
+.emoji {
+  font-size: 1.8rem;
+  width: fit-content;
+  animation: float-soft 4.5s ease-in-out infinite;
+}
+
+.stars {
+  display: flex;
+  gap: 0.2rem;
+  color: #ffb400;
+  font-size: 1.05rem;
+  text-shadow: 0 2px 4px rgba(255, 180, 0, 0.3);
+}
+
+.quote {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border-top: 2px dashed rgba(45, 55, 72, 0.15);
+  padding-top: 1rem;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  font-size: 1.4rem;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.name {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1rem;
+}
+.child {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+/* Pagination */
+.swiper :global(.swiper-pagination-bullet) {
+  width: 10px;
+  height: 10px;
+  background: var(--soft-blue);
+  opacity: 0.35;
+  transition: all var(--speed-base);
+}
+.swiper :global(.swiper-pagination-bullet-active) {
+  width: 26px;
+  border-radius: var(--r-pill);
+  background: linear-gradient(90deg, var(--secondary), var(--orange));
+  opacity: 1;
+}

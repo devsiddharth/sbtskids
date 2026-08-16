@@ -1,0 +1,51 @@
+.sun {
+  width: 64px;
+  height: 64px;
+  animation: spin-slow 32s linear infinite;
+  filter: drop-shadow(0 6px 14px rgba(255, 190, 60, 0.5));
+}
+
+.sunRays {
+  transform-origin: 50px 50px;
+}
+
+.cloud {
+  width: 130px;
+  height: auto;
+  animation: drift 60s linear infinite;
+  filter: drop-shadow(0 8px 16px rgba(118, 146, 255, 0.22));
+}
+
+.balloon {
+  width: 44px;
+  height: auto;
+  animation: float-soft 5s ease-in-out infinite;
+  filter: drop-shadow(0 8px 14px rgba(45, 55, 72, 0.2));
+}
+
+.bird {
+  width: 56px;
+  height: auto;
+  animation: bob 6s ease-in-out infinite;
+}
+
+.star {
+  animation: twinkle 2.8s ease-in-out infinite;
+}
+
+.rainbow {
+  width: 110px;
+  height: auto;
+  animation: float 7s ease-in-out infinite;
+}
+
+.plane {
+  width: 52px;
+  height: auto;
+  animation: float-soft 5.4s ease-in-out infinite;
+  filter: drop-shadow(0 8px 14px rgba(45, 55, 72, 0.18));
+}
+
+.heart {
+  animation: twinkle 3s ease-in-out infinite;
+}

@@ -1,0 +1,92 @@
+.section {
+  position: relative;
+  background: linear-gradient(180deg, var(--bg) 0%, #fff9ea 100%);
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+
+.card {
+  position: relative;
+  background: var(--card-bg, var(--accent-soft));
+  border-radius: var(--r-lg);
+  padding: 2rem 1.7rem 1.7rem;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--speed-base) var(--ease-spring),
+    box-shadow var(--speed-base) var(--ease-spring);
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-8px) rotate(-0.6deg);
+  box-shadow: var(--shadow-lg);
+}
+
+.num {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.9rem;
+  color: rgba(45, 55, 72, 0.12);
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 20px;
+  background: #ffffff;
+  font-size: 2rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.1rem;
+  transition: transform var(--speed-base) var(--ease-bounce);
+}
+.card:hover .icon {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+.title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.scribbleBar {
+  display: block;
+  width: 44px;
+  height: 5px;
+  border-radius: var(--r-pill);
+  background: linear-gradient(90deg, var(--secondary), var(--orange));
+  margin-top: 1rem;
+}
+
+.decor {
+  position: absolute;
+  bottom: 2rem;
+  left: 3%;
+  display: flex;
+  gap: 1.6rem;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
