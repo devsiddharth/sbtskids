@@ -14,10 +14,10 @@ import styles from './About.module.css'
 const yearsOfJoy = new Date().getFullYear() - site.established
 
 const aboutImages = {
-  main: '', // '/images/campus/main-building.jpg'
+  main: '/images/campus/Campus_fv.jpg',
   mainEmoji: '🏫',
   mainLabel: 'Our School Building',
-  small: '', // '/images/play-area/happy-kids.jpg'
+  small: '/images/play-area/IMG_0727.jpg',
   smallEmoji: '😊',
   smallLabel: 'Happy Little Learners',
 }

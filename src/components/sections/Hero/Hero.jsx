@@ -10,7 +10,7 @@ import { Sun, Cloud, Bird, Balloon, Star, Rainbow, PaperPlane } from '../../ui/D
 import styles from './Hero.module.css'
 
 const visual = {
-  campusImage: '', // '/images/campus/hero-campus.jpg'
+  campusImage: '/images/campus/Hero_cover.jpg',
   campusEmoji: '🏫',
   campusLabel: 'Our Happy Campus',
 }
@@ -98,7 +98,7 @@ export default function Hero() {
               emoji={visual.campusEmoji}
               color="#FFA94D"
               radius="calc(var(--r-xl) - 6px)"
-              aspectRatio="4 / 3"
+              aspectRatio="16 / 10"
             />
           </div>
 

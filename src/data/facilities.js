@@ -6,7 +6,7 @@ export const facilities = [
     color: '#7692FF',
     description:
       'Bright, airy rooms filled with light, colour and interactive digital boards that make every lesson feel like play.',
-    image: '', // e.g. '/images/classrooms/smart-classroom.jpg'
+    image: '/images/classrooms/IMG_0627.jpg',
     badge: 'Digital Learning',
   },
   {
@@ -16,7 +16,7 @@ export const facilities = [
     color: '#55D6BE',
     description:
       'A colourful, cushioned outdoor wonderland with slides, swings and soft turf — where friendships are made daily.',
-    image: '', // e.g. '/images/play-area/playground.jpg'
+    image: '/images/play-area/IMG_0724.jpg',
     badge: 'Cushioned & Fenced',
   },
   {
@@ -26,7 +26,7 @@ export const facilities = [
     color: '#FFA94D',
     description:
       'A cosy reading corner bursting with picture books, pop-ups and bedtime classics that grow a lifelong love for stories.',
-    image: '', // e.g. '/images/classrooms/library.jpg'
+    image: '/images/classrooms/IMG_0663.jpg',
     badge: '500+ Books',
   },
   {
@@ -36,7 +36,7 @@ export const facilities = [
     color: '#B197FC',
     description:
       'Rhythm, movement and melody — a joyful studio where little feet tap and tiny voices sing every single day.',
-    image: '', // e.g. '/images/classrooms/music-room.jpg'
+    image: '/images/classrooms/IMG_0654.jpg',
     badge: 'Rhythm & Movement',
   },
   {
@@ -46,7 +46,7 @@ export const facilities = [
     color: '#FF5A5F',
     description:
       'Crayons, clay, colours and craft — a wonderland where imagination becomes something beautiful you can hold.',
-    image: '', // e.g. '/images/classrooms/art-corner.jpg'
+    image: '/images/activities/IMG_0677.jpg',
     badge: 'Every Day Is Art Day',
   },
   {
@@ -56,7 +56,7 @@ export const facilities = [
     color: '#FFD93D',
     description:
       'A cheerful yellow bus with trained attendants, seat belts and live tracking — door to door, with a smile.',
-    image: '', // e.g. '/images/campus/school-bus.jpg'
+    image: '/images/campus/IMG_0631.jpg',
     badge: 'GPS Tracked',
   },
 ]
