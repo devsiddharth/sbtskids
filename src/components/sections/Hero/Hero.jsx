@@ -55,7 +55,7 @@ export default function Hero() {
 
           <motion.p className={styles.subtitle} variants={fadeUp}>
             Every little smile matters. Our caring teachers turn curiosity into
-            confidence through joyful, play-based learning — in a safe, colourful
+            confidence through joyful, play-based learning in a safe, colourful
             world made just for your child.
           </motion.p>
 
@@ -80,7 +80,7 @@ export default function Hero() {
               <span aria-hidden="true">🛡️</span> Safe &amp; CCTV Monitored
             </span>
             <span className={styles.miniFact}>
-              <span aria-hidden="true">🧑‍🏫</span> 1:12 Teacher Ratio
+              <span aria-hidden="true">🧑‍🏫</span> 1:18 Teacher Ratio
             </span>
             <span className={styles.miniFact}>
               <span aria-hidden="true">🎨</span> Play-Based Learning
@@ -109,7 +109,7 @@ export default function Hero() {
             <span>👩‍🏫</span> Loving Teachers
           </div>
           <div className={`${styles.chip} ${styles.chip3}`} aria-hidden="true">
-            <span>🎈</span> 14+ Years of Joy
+            <span>🎈</span> 3+ Years of Joy
           </div>
         </motion.div>
       </motion.div>
@@ -151,7 +151,7 @@ export default function Hero() {
                   </p>
                   <p>Our campus tour video is being prepared.</p>
                   <p style={{ fontSize: '0.95rem', opacity: 0.85 }}>
-                    Add your video link to <code>src/data/site.js</code> — we’ll play it right here.
+                    Add your video link to <code>IMG_0723.mp4</code> — we’ll play it right here.
                   </p>
                 </div>
               </div>

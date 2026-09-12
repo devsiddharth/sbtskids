@@ -11,7 +11,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Our Story"
         title="The little school with a very big heart"
-        subtitle="From the very first hello, we've believed that childhood should feel like a wonderland — safe, joyful and full of magic."
+        subtitle="From the very first hello, we've believed that childhood should feel like a wonderland safe, joyful and full of magic."
         emoji="🌻"
         crumbs={['About']}
       />

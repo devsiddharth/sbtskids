@@ -15,19 +15,9 @@ export const facilities = [
     emoji: '🛝',
     color: '#55D6BE',
     description:
-      'A colourful, cushioned outdoor wonderland with slides, swings and soft turf — where friendships are made daily.',
+      'A colourful, cushioned outdoor wonderland with slides, swings and soft turf where friendships are made daily.',
     image: '/images/play-area/IMG_0724.jpg',
-    badge: 'Cushioned & Fenced',
-  },
-  {
-    id: 'library',
-    title: 'Story Book Library',
-    emoji: '📚',
-    color: '#FFA94D',
-    description:
-      'A cosy reading corner bursting with picture books, pop-ups and bedtime classics that grow a lifelong love for stories.',
-    image: '/images/classrooms/IMG_0663.jpg',
-    badge: '500+ Books',
+    badge: 'Cushioned & safe',
   },
   {
     id: 'music',
