@@ -9,13 +9,13 @@ export const site = {
   name: 'SBTS Kids',
   shortName: 'SBTS',
   tagline: 'Where Little Smiles Learn to Shine',
-  established: 2012,
+  established: 2022,
 
   /* ✏️ Contact details */
-  phone: '+91 98765 43210',
-  phoneLink: 'tel:+919876543210',
-  email: 'hello@sbtsschool.in',
-  address: 'Green Park, Near City Center Mall, Your City, India',
+  phone: '+91 86394 59962',
+  phoneLink: 'tel:+918639459962',
+  email: 'lathashivaranjani9@gmail.com',
+  address: 'SRI BALA TRIPURA SUNDARI KIDS PLAY SCHOOL, 6-5-172/1, Power House Colony, IB COLONY, Ramagundam, Telangana 505209',
   timings: 'Mon – Sat · 9:00 AM – 12:30 PM',
 
   /* ✏️ Admission */
@@ -27,11 +27,11 @@ export const site = {
     facebook: 'https://facebook.com',
     instagram: 'https://instagram.com',
     youtube: 'https://youtube.com',
-    whatsapp: 'https://wa.me/919876543210',
+    whatsapp: 'https://wa.me/918639459962',
   },
 
   /* ✏️ Google Maps — replace with your exact address */
-  mapQuery: 'Green Park, Your City, India',
+  mapQuery: 'SRI BALA TRIPURA SUNDARI KIDS PLAY SCHOOL',
 }
 
 /* ---------- Navigation ---------- */

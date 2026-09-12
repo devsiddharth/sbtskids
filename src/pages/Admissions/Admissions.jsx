@@ -9,7 +9,7 @@ export default function AdmissionsPage() {
       <PageHero
         eyebrow="Admissions Open"
         title="Welcome to your child's happiest chapter"
-        subtitle="Joining our family is simple, warm and exciting. Here's everything you need to know — and our team is always a call away."
+        subtitle="Joining our family is simple, warm and exciting. Here's everything you need to know and our team is always a call away."
         emoji="🎈"
         crumbs={['Admissions']}
       />
