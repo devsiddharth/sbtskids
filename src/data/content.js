@@ -69,13 +69,13 @@ export const safetyFeatures = [
 ]
 
 export const achievements = [
-  { year: '2022', title: 'Best Play School Award', emoji: '🏆', color: 'var(--primary-soft)' },
+  { year: '2022', title: 'Best Play School Teacher Award', emoji: '🏆', color: 'var(--primary-soft)' },
   { year: '2025', title: 'Clean & Green Campus Award', emoji: '🌿', color: 'var(--accent-soft)' },
   { year: '2025', title: '95% Happy Alumni', emoji: '🎓', color: 'var(--lavender-soft)' },
 ]
 
 export const stats = [
-  { value: 2, suffix: '+', label: 'Years of Joy', emoji: '🎈' },
+  { value: 4, suffix: '+', label: 'Years of Joy', emoji: '🎈' },
   { value: 150, suffix: '+', label: 'Happy Kids', emoji: '😊' },
   { value: 8, suffix: '+', label: 'Caring Teachers', emoji: '💛' },
   { value: 98, suffix: '%', label: 'Parent Smiles', emoji: '❤️' },
@@ -142,9 +142,9 @@ export const methodology = [
   { emoji: '🔤', title: 'Alphabet Learning', text: 'Letter sounds through songs, sand-tracing and playful phonics.', color: '#FF5A5F' },
   { emoji: '📖', title: 'Storytelling', text: 'Puppets, voices and picture books that make reading irresistible.', color: '#FFA94D' },
   { emoji: '🎵', title: 'Music & Rhythm', text: 'Clapping, singing and simple instruments that build focus.', color: '#7692FF' },
-  { emoji: '💃', title: 'Dance & Movement', text: 'Little bodies moving big ideas — coordination with joy.', color: '#B197FC' },
+  { emoji: '💃', title: 'Dance & Movement', text: 'Little bodies moving big ideas coordination with joy.', color: '#B197FC' },
   { emoji: '🖌️', title: 'Art & Craft', text: 'Painting, clay and collage that turn ideas into treasures.', color: '#55D6BE' },
   { emoji: '🌳', title: 'Outdoor Learning', text: 'Nature walks and play that teach the world first-hand.', color: '#FFD93D' },
-  { emoji: '🧩', title: 'Play-Based Learning', text: 'Blocks, puzzles and role-play — the child’s real classroom.', color: '#FF5A5F' },
+  { emoji: '🧩', title: 'Play-Based Learning', text: 'Blocks, puzzles and role-play the child’s real classroom.', color: '#FF5A5F' },
   { emoji: '🎲', title: 'Games & Puzzles', text: 'Turn-taking, patience and smart thinking, one win at a time.', color: '#7692FF' },
 ]

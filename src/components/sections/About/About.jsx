@@ -12,7 +12,7 @@ import { PaperPlane, Heart } from '../../ui/Decor/Decor.jsx'
 import styles from './About.module.css'
 
 const yearsOfJoy = new Date().getFullYear() - site.established
-
+ 
 const aboutImages = {
   main: '/images/campus/Campus_fv.jpg',
   mainEmoji: '🏫',
@@ -122,7 +122,7 @@ export default function About() {
                 <span className={styles.itemIcon} aria-hidden="true">
                   👶
                 </span>
-                Ages 2.5 – 10+ Years
+                Ages 2 – 10+ Years
               </li>
               <li className={styles.item}>
                 <span className={styles.itemIcon} aria-hidden="true">

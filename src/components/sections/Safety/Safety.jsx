@@ -30,7 +30,7 @@ export default function Safety() {
               Your child’s safety is our <span style={{ color: 'var(--soft-blue)' }}>highest priority</span>
             </>
           }
-          subtitle="Our campus is monitored with modern CCTV surveillance and layered safety systems — giving parents complete peace of mind, every single day."
+          subtitle="Our campus is monitored with modern CCTV surveillance and layered safety systems giving parents complete peace of mind, every single day."
           emoji="🛡️"
           light={false}
         />
@@ -59,7 +59,7 @@ export default function Safety() {
               aspectRatio="16 / 9"
             />
             <div className={styles.cctvFoot}>
-              <span aria-hidden="true">🎥</span> 24 cameras · Every corridor &amp; play area covered
+              <span aria-hidden="true">🎥</span> 24 hours cameras · Every corridor &amp; play area covered
             </div>
           </motion.div>
 

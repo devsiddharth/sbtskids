@@ -8,7 +8,7 @@ export default function SafetyPage() {
     <main>
       <PageHero
         eyebrow="Safety & Security"
-        title="Protected by love — and by design"
+        title="Protected by love and by design"
         subtitle="CCTV, secure entry, verified staff and a nurse on campus. Because nothing matters more than your peace of mind."
         emoji="🛡️"
         crumbs={['Safety']}

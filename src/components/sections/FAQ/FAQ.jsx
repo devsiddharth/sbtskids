@@ -88,7 +88,7 @@ export default function FAQ() {
             </span>
             <h3 className={styles.sideTitle}>Have a question?</h3>
             <p className={styles.sideText}>
-              Our friendly admissions team answers every call with a smile — and every message with care.
+              Our friendly admissions team answers every call with a smile and every message with care.
             </p>
             <Button to="/contact" variant="primary" className={styles.sideBtn}>
               Ask Us Anything

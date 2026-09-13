@@ -46,7 +46,7 @@ export default function Facilities() {
               Spaces designed to make <span style={{ color: 'var(--soft-blue)' }}>little hearts</span> feel at home
             </>
           }
-          subtitle="Every corner of our campus is thoughtfully built for wonder, safety and joy — from smart classrooms to sunny play areas."
+          subtitle="Every corner of our campus is thoughtfully built for wonder, safety and joy from smart classrooms to sunny play areas."
           emoji="🏫"
         />
 

@@ -44,7 +44,7 @@ export const programs = [
     gradient: ['#7692FF', '#B197FC'],
     tagline: 'Ready for the big school, glowing with confidence.',
     description:
-      'A joyful bridge year — fluent readers, confident speakers and creative thinkers, fully prepared for Grade 1 with a smile.',
+      'A joyful bridge year fluent readers, confident speakers and creative thinkers, fully prepared for Grade 1 with a smile.',
     highlights: ['Fluent reading & writing', 'Maths through play', 'Public speaking', 'School-readiness program'],
   },
   {

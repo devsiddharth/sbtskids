@@ -25,7 +25,7 @@ export default function Contact() {
               We can’t wait to <span style={{ color: 'var(--secondary)' }}>meet your little star</span>
             </>
           }
-          subtitle="Fill the form below and our team will call you back with a smile — usually within a few hours."
+          subtitle="Fill the form below and our team will call you back with a smile, usually within a few hours."
           emoji="💌"
         />
 
@@ -41,7 +41,7 @@ export default function Contact() {
             <span className={styles.infoEmoji} aria-hidden="true">
               🏫
             </span>
-            <h3 className={styles.infoTitle}>Say hello — we're friendly, promise!</h3>
+            <h3 className={styles.infoTitle}>Say hello, we're friendly, promise!</h3>
             <p className={styles.infoText}>
               Whether it's a question about admissions, a campus tour or simply to hear more about our
               little world, we'd love to chat.
@@ -77,7 +77,7 @@ export default function Contact() {
                 </span>
                 <h3 className={styles.successTitle}>Thank you, dear parent!</h3>
                 <p className={styles.successText}>
-                  Your message has flown to our admissions desk. Expect a happy call from us very soon —
+                  Your message has flown to our admissions desk. Expect a happy call from us very soon
                   usually within a few hours.
                 </p>
                 <Button onClick={() => setSubmitted(false)} variant="ghost">
@@ -101,10 +101,15 @@ export default function Contact() {
                       <option value="" disabled>
                         Select age group
                       </option>
-                      <option>1.5 – 2.5 years (Playgroup)</option>
-                      <option>2.5 – 3.5 years (Nursery)</option>
-                      <option>3.5 – 4.5 years (LKG)</option>
-                      <option>4.5 – 5.5 years (UKG)</option>
+                      <option>🧸 Playgroup — 2+ years</option> 
+                      <option>🐰 Nursery — 3+ years</option> 
+                      <option>🦊 LKG · LKG — 4+ years</option> 
+                      <option>🦁 UKG · UKG — 5+ years</option> 
+                      <option>🐯 Grade 1 — 6+ years</option> 
+                      <option>🐻 Grade 2 — 7+ years</option> 
+                      <option>🐼 Grade 3 — 8+ years</option> 
+                      <option>🦄 Grade 4 — 9+ years</option> 
+                      <option>🦖 Grade 5 — 10+ years</option>
                     </select>
                   </div>
                 </div>

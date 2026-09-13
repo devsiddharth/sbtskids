@@ -6,7 +6,7 @@ export const facilities = [
     color: '#7692FF',
     description:
       'Bright, airy rooms filled with light, colour and interactive digital boards that make every lesson feel like play.',
-    image: '/images/classrooms/IMG_0627.jpg',
+    image: '/images/classrooms/IMG_0646.jpg',
     badge: 'Digital Learning',
   },
   {
@@ -47,6 +47,6 @@ export const facilities = [
     description:
       'A cheerful yellow bus with trained attendants, seat belts and live tracking — door to door, with a smile.',
     image: '/images/campus/IMG_0631.jpg',
-    badge: 'GPS Tracked',
+    badge: 'Safe Transport',
   },
 ]
