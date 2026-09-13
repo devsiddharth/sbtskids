@@ -36,7 +36,7 @@ export default function Programs() {
               A perfect little class for every <span style={{ color: 'var(--secondary)' }}>growing star</span>
             </>
           }
-          subtitle="From wobbly first steps to big-school readiness — each stage is a joyful adventure, gently matched to your child’s age and rhythm."
+          subtitle="From wobbly first steps to big-school readiness, each stage is a joyful adventure, gently matched to your child’s age and rhythm."
           emoji="🧸"
         />
 
@@ -130,7 +130,7 @@ export default function Programs() {
           viewport={viewportOnce}
         >
           <motion.p variants={fadeUp}>
-            <span aria-hidden="true">💡</span> Not sure which class fits? Visit us — our teachers will
+            <span aria-hidden="true">💡</span> Not sure which class fits? Visit us. Our teachers will
             happily help you choose the right group for your little one.
           </motion.p>
         </motion.div>

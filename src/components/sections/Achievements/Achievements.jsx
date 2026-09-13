@@ -15,7 +15,7 @@ export default function Achievements() {
               Little achievements, <span style={{ color: 'var(--secondary)' }}>big hearts</span>
             </>
           }
-          subtitle="Recognition is lovely — but our proudest achievement is still the sound of children laughing while they learn."
+          subtitle="Recognition is lovely, but our proudest achievement is still the sound of children laughing while they learn."
           emoji="🏆"
         />
 

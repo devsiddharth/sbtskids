@@ -12,7 +12,7 @@ export default function Methodology() {
           eyebrow="How We Learn"
           title={
             <>
-              Learning that feels like <span style={{ color: 'var(--secondary)' }}>playing</span> — because it is
+              Learning that feels like <span style={{ color: 'var(--secondary)' }}>playing</span> , because it is
             </>
           }
           subtitle="No rote, no pressure. Just eight joyful ways little brains grow, one giggle at a time."

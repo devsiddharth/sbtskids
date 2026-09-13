@@ -6,7 +6,7 @@ export const facilities = [
     color: '#7692FF',
     description:
       'Bright, airy rooms filled with light, colour and interactive digital boards that make every lesson feel like play.',
-    image: '/images/classrooms/IMG_0627.jpg',
+    image: '/images/classrooms/IMG_0646.jpg',
     badge: 'Digital Learning',
   },
   {
@@ -15,19 +15,9 @@ export const facilities = [
     emoji: '🛝',
     color: '#55D6BE',
     description:
-      'A colourful, cushioned outdoor wonderland with slides, swings and soft turf — where friendships are made daily.',
+      'A colourful, cushioned outdoor wonderland with slides, swings and soft turf where friendships are made daily.',
     image: '/images/play-area/IMG_0724.jpg',
-    badge: 'Cushioned & Fenced',
-  },
-  {
-    id: 'library',
-    title: 'Story Book Library',
-    emoji: '📚',
-    color: '#FFA94D',
-    description:
-      'A cosy reading corner bursting with picture books, pop-ups and bedtime classics that grow a lifelong love for stories.',
-    image: '/images/classrooms/IMG_0663.jpg',
-    badge: '500+ Books',
+    badge: 'Cushioned & safe',
   },
   {
     id: 'music',
@@ -57,6 +47,6 @@ export const facilities = [
     description:
       'A cheerful yellow bus with trained attendants, seat belts and live tracking — door to door, with a smile.',
     image: '/images/campus/IMG_0631.jpg',
-    badge: 'GPS Tracked',
+    badge: 'Safe Transport',
   },
 ]

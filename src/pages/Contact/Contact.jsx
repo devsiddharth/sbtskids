@@ -7,8 +7,8 @@ export default function ContactPage() {
     <main>
       <PageHero
         eyebrow="Contact Us"
-        title="Say hello — we're friendly, promise!"
-        subtitle="Questions, tours, or just to chat about your little one — our door (and our inbox) is always open."
+        title="Say hello, we're friendly, promise!"
+        subtitle="Questions, tours, or just to chat about your little one our door (and our inbox) is always open."
         emoji="💌"
         crumbs={['Contact']}
       />

@@ -1,20 +1,39 @@
-import { useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination'
+import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
-import { gallery } from '../../../data/gallery.js'
+import { galleryGroups } from '../../../data/gallery.js'
 import SectionHeading from '../../ui/SectionHeading/SectionHeading.jsx'
 import SmartImage from '../../ui/SmartImage/SmartImage.jsx'
 import Lightbox from '../../ui/Lightbox/Lightbox.jsx'
 import { fadeUp, stagger, viewportOnce } from '../../../utils/motion.js'
 import styles from './Gallery.module.css'
 
+/* The grid shows a tidy preview; the lightbox always holds the full album. */
+const PREVIEW_LIMIT = 8
+
 export default function Gallery() {
+  const [activeId, setActiveId] = useState(galleryGroups[0].id)
   const [lightboxIndex, setLightboxIndex] = useState(null)
 
-  const openLightbox = (i) => setLightboxIndex(i)
+  const active = galleryGroups.find((g) => g.id === activeId) ?? galleryGroups[0]
+
+  const items = useMemo(
+    () =>
+      active.photos.map((photo) => ({
+        ...photo,
+        category: active.title,
+        emoji: active.emoji,
+        color: active.color,
+      })),
+    [active],
+  )
+
+  const preview = items.slice(0, PREVIEW_LIMIT)
+  const hasMore = items.length > PREVIEW_LIMIT
+
+  const selectGroup = (id) => {
+    setActiveId(id)
+    setLightboxIndex(null)
+  }
 
   return (
     <section className={`section-pad ${styles.section}`} aria-labelledby="gallery-title">
@@ -26,32 +45,61 @@ export default function Gallery() {
               A peek inside our <span style={{ color: 'var(--soft-blue)' }}>colourful world</span>
             </>
           }
-          subtitle="Tap any moment to see it up close. New photos from our little ones’ days are added all the time."
+          subtitle="Pick a gallery to see the whole album, then tap any moment to view it up close."
           emoji="📸"
         />
 
-        <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={viewportOnce}>
-          <motion.div variants={fadeUp}>
-            <Swiper
-              modules={[Autoplay, Pagination]}
-              spaceBetween={20}
-              slidesPerView={1}
-              loop
-              grabCursor
-              autoplay={{ delay: 3200, disableOnInteraction: false, pauseOnMouseEnter: true }}
-              pagination={{ clickable: true }}
-              breakpoints={{
-                640: { slidesPerView: 2 },
-                980: { slidesPerView: 3 },
-                1200: { slidesPerView: 4 },
-              }}
-              className={styles.swiper}
+        <div className={styles.tabs} role="group" aria-label="Choose a photo gallery">
+          {galleryGroups.map((g) => (
+            <button
+              key={g.id}
+              type="button"
+              className={`${styles.tab} ${g.id === active.id ? styles.tabActive : ''}`}
+              style={{ '--tint': g.color }}
+              aria-pressed={g.id === active.id}
+              onClick={() => selectGroup(g.id)}
             >
-              {gallery.map((g, i) => (
-                <SwiperSlide key={g.id}>
+              <span className={styles.tabEmoji} aria-hidden="true">
+                {g.emoji}
+              </span>
+              See {g.title}
+              <span className={styles.tabCount}>{g.photos.length}</span>
+            </button>
+          ))}
+        </div>
+
+        <p className={styles.blurb}>{active.blurb}</p>
+
+        {items.length === 0 ? (
+          <motion.div
+            className={styles.empty}
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={viewportOnce}
+            transition={{ duration: 0.55 }}
+            role="status"
+          >
+            <span className={styles.emptyEmoji} aria-hidden="true">
+              {active.emoji}
+            </span>
+            <h3 className={styles.emptyTitle}>Photos coming soon</h3>
+            <p className={styles.emptyText}>{active.emptyText}</p>
+          </motion.div>
+        ) : (
+          <>
+            <motion.div
+              key={active.id}
+              className={styles.grid}
+              variants={stagger}
+              initial="hidden"
+              animate="visible"
+            >
+              {preview.map((g, i) => (
+                <motion.div key={g.src} variants={fadeUp}>
                   <button
-                    className={styles.slideBtn}
-                    onClick={() => openLightbox(i)}
+                    type="button"
+                    className={styles.tile}
+                    onClick={() => setLightboxIndex(i)}
                     aria-label={`View photo: ${g.label}`}
                   >
                     <SmartImage
@@ -63,24 +111,32 @@ export default function Gallery() {
                       radius="var(--r-lg)"
                       aspectRatio="4 / 3"
                     />
-                    <span className={styles.slideLabel}>
-                      <span className={styles.slideCat}>{g.category}</span>
+                    <span className={styles.tileLabel}>
+                      <span className={styles.tileCat}>{g.category}</span>
                       {g.label}
                       <span className={styles.zoomHint} aria-hidden="true">
                         🔍
                       </span>
                     </span>
                   </button>
-                </SwiperSlide>
+                </motion.div>
               ))}
-            </Swiper>
-          </motion.div>
-        </motion.div>
+            </motion.div>
+
+            {hasMore && (
+              <div className={styles.more}>
+                <button type="button" className={styles.moreBtn} onClick={() => setLightboxIndex(0)}>
+                  View all {items.length} {active.title.toLowerCase()} photos
+                </button>
+              </div>
+            )}
+          </>
+        )}
       </div>
 
       {lightboxIndex !== null && (
         <Lightbox
-          items={gallery}
+          items={items}
           index={lightboxIndex}
           onClose={() => setLightboxIndex(null)}
           onNavigate={setLightboxIndex}

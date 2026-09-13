@@ -12,7 +12,7 @@ import { PaperPlane, Heart } from '../../ui/Decor/Decor.jsx'
 import styles from './About.module.css'
 
 const yearsOfJoy = new Date().getFullYear() - site.established
-
+ 
 const aboutImages = {
   main: '/images/campus/Campus_fv.jpg',
   mainEmoji: '🏫',
@@ -103,13 +103,13 @@ export default function About() {
               emoji="🌻"
             />
             <motion.p className={styles.lead} variants={fadeUp}>
-              At {site.name}, we believe childhood is not a race — it’s a wonderland. Since 2012,
+              At {site.name}, we believe childhood is not a race it’s a wonderland. Since 2022,
               we’ve been the happy place where first steps, first words and first friendships bloom.
             </motion.p>
             <motion.p className={styles.body} variants={fadeUp}>
               Our bright classrooms, leafy play areas and warm, loving teachers are designed around
               one simple idea: when children feel safe and happy, they learn almost magically. Here,
-              every child is seen, heard, and celebrated — exactly as they are.
+              every child is seen, heard, and celebrated exactly as they are.
             </motion.p>
             <motion.ul className={styles.list} variants={fadeUp}>
               <li className={styles.item}>
@@ -122,7 +122,7 @@ export default function About() {
                 <span className={styles.itemIcon} aria-hidden="true">
                   👶
                 </span>
-                Ages 1.5 – 5.5 Years
+                Ages 2 – 10+ Years
               </li>
               <li className={styles.item}>
                 <span className={styles.itemIcon} aria-hidden="true">

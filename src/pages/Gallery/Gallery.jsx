@@ -9,7 +9,7 @@ export default function GalleryPage() {
       <PageHero
         eyebrow="Our Gallery"
         title="Little moments, captured with love"
-        subtitle="A peek inside our colourful world — festivals, play days, story time and a thousand tiny smiles."
+        subtitle="A peek inside our colourful world festivals, play days, story time and a thousand tiny smiles."
         emoji="📸"
         crumbs={['Gallery']}
       />

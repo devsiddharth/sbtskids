@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { IoPlay, IoClose } from 'react-icons/io5'
 import { fadeUp, stagger } from '../../../utils/motion.js'
@@ -13,10 +13,37 @@ const visual = {
   campusImage: '/images/campus/Hero_cover.jpg',
   campusEmoji: '🏫',
   campusLabel: 'Our Happy Campus',
+  video: '/images/campus/IMG_0723.mp4',
 }
 
 export default function Hero() {
   const [showVideo, setShowVideo] = useState(false)
+  const [videoRatio, setVideoRatio] = useState(16 / 9)
+  const videoRef = useRef(null)
+  const closeBtnRef = useRef(null)
+
+  /* Pause playback before hiding so no audio/video outlives the modal */
+  const closeVideo = useCallback(() => {
+    videoRef.current?.pause()
+    setShowVideo(false)
+  }, [])
+
+  useEffect(() => {
+    if (!showVideo) return
+    const previousFocus = document.activeElement
+    closeBtnRef.current?.focus()
+    document.body.style.overflow = 'hidden'
+
+    const onKey = (e) => {
+      if (e.key === 'Escape') closeVideo()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+      previousFocus?.focus?.()
+    }
+  }, [showVideo, closeVideo])
 
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
@@ -55,7 +82,7 @@ export default function Hero() {
 
           <motion.p className={styles.subtitle} variants={fadeUp}>
             Every little smile matters. Our caring teachers turn curiosity into
-            confidence through joyful, play-based learning — in a safe, colourful
+            confidence through joyful, play-based learning in a safe, colourful
             world made just for your child.
           </motion.p>
 
@@ -80,7 +107,7 @@ export default function Hero() {
               <span aria-hidden="true">🛡️</span> Safe &amp; CCTV Monitored
             </span>
             <span className={styles.miniFact}>
-              <span aria-hidden="true">🧑‍🏫</span> 1:12 Teacher Ratio
+              <span aria-hidden="true">🧑‍🏫</span> 1:18 Teacher Ratio
             </span>
             <span className={styles.miniFact}>
               <span aria-hidden="true">🎨</span> Play-Based Learning
@@ -109,7 +136,7 @@ export default function Hero() {
             <span>👩‍🏫</span> Loving Teachers
           </div>
           <div className={`${styles.chip} ${styles.chip3}`} aria-hidden="true">
-            <span>🎈</span> 14+ Years of Joy
+            <span>🎈</span> 4+ Years of Joy
           </div>
         </motion.div>
       </motion.div>
@@ -131,10 +158,10 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setShowVideo(false)}
+            onClick={closeVideo}
             role="dialog"
             aria-modal="true"
-            aria-label="Campus video"
+            aria-label="Campus walkway video"
           >
             <motion.div
               className={styles.videoFrame}
@@ -142,22 +169,31 @@ export default function Hero() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: 'spring', stiffness: 260, damping: 24 }}
+              style={{ '--video-ratio': videoRatio }}
               onClick={(e) => e.stopPropagation()}
             >
-              <div className={styles.videoPlaceholder}>
-                <div>
-                  <p style={{ fontSize: '3rem', marginBottom: '0.6rem' }} aria-hidden="true">
-                    🎬
-                  </p>
-                  <p>Our campus tour video is being prepared.</p>
-                  <p style={{ fontSize: '0.95rem', opacity: 0.85 }}>
-                    Add your video link to <code>src/data/site.js</code> — we’ll play it right here.
-                  </p>
-                </div>
-              </div>
+              <video
+                ref={videoRef}
+                className={styles.videoEl}
+                src={visual.video}
+                poster={visual.campusImage}
+                autoPlay
+                muted
+                playsInline
+                controls
+                preload="auto"
+                aria-label="A walk through our school campus"
+                onLoadedMetadata={(e) => {
+                  const v = e.currentTarget
+                  if (v.videoWidth && v.videoHeight) setVideoRatio(v.videoWidth / v.videoHeight)
+                }}
+              >
+                Your browser does not support the video tag.
+              </video>
               <button
+                ref={closeBtnRef}
                 className={styles.videoClose}
-                onClick={() => setShowVideo(false)}
+                onClick={closeVideo}
                 aria-label="Close video"
               >
                 <IoClose />
