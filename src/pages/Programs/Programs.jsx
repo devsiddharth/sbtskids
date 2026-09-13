@@ -11,7 +11,7 @@ export default function ProgramsPage() {
       <PageHero
         eyebrow="Programs & Curriculum"
         title="A joyful class for every growing star"
-        subtitle="Playgroup to UKG — each stage is a gentle adventure, built around your child's age, rhythm and natural curiosity."
+        subtitle="Playgroup to UKG each stage is a gentle adventure, built around your child's age, rhythm and natural curiosity."
         emoji="🧸"
         crumbs={['Programs']}
       />

@@ -5,7 +5,7 @@ export const faqs = [
   },
   {
     q: 'Is my child safe at school?',
-    a: 'Absolutely. Your child’s safety is our highest priority. Our campus is monitored with modern CCTV surveillance, secured gates, verified staff and a dedicated school maid — giving parents complete peace of mind.',
+    a: 'Absolutely. Your child’s safety is our highest priority. Our campus is monitored with modern CCTV surveillance, secured gates, verified staff and a dedicated school maid giving parents complete peace of mind.',
   },
   {
     q: 'What does a typical day look like?',
@@ -17,7 +17,7 @@ export const faqs = [
   },
   {
     q: 'What is the teacher-to-child ratio?',
-    a: 'We keep our groups wonderfully small — a caring teacher for every 17–19 children, so every child is truly seen and heard.',
+    a: 'We keep our groups wonderfully small a caring teacher for every 17–19 children, so every child is truly seen and heard.',
   },
   {
     q: 'How do parents stay updated?',

@@ -16,7 +16,7 @@ export default function WhyChooseUs() {
               Six little promises we <span style={{ color: 'var(--secondary)' }}>never break</span>
             </>
           }
-          subtitle="Parents don't just choose a school — they choose who they trust with their most precious person. Here is why thousands trust us."
+          subtitle="Parents don't just choose a school; they choose who they trust with their most precious person. Here is why thousands trust us."
           emoji="💛"
         />
 
