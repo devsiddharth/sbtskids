@@ -7,7 +7,7 @@
 export const site = {
   /* ✏️ School identity */
   name: 'SBTS Kids',
-  fullName: "Sri Balatripura Sundari Kids' school",
+  fullName: "Sri Bala Tripura Sundari Kids' School",
   shortName: 'SBTS',
   tagline: 'Where Little Smiles Learn to Shine',
   motto: 'Nature · Study · Activity',

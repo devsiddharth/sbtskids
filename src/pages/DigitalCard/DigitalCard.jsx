@@ -5,8 +5,8 @@ export default function DigitalCard() {
   return (
     <main id="main-content">
       <PageMeta
-        title="Digital Visiting Card — Sri Balatripura Sundari Kids' school"
-        description="Sri Balatripura Sundari Kids' school, Ramagundam — Where Little Smiles Learn to Shine. Play-based learning, caring teachers and a safe, colourful campus. Visit www.sbtskids.in"
+        title="Digital Visiting Card — Sri Bala Tripura Sundari Kids' School"
+        description="Sri Bala Tripura Sundari Kids' School, Ramagundam — Where Little Smiles Learn to Shine. Play-based learning, caring teachers and a safe, colourful campus. Visit www.sbtskids.in"
       />
       <DigitalVisitingCard />
     </main>

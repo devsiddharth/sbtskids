@@ -72,9 +72,9 @@ export default function DigitalVisitingCard() {
             </div>
 
             <h1 className={styles.schoolName}>
-              <span>Sri Balatripura</span>{' '}
+              <span>Sri Bala Tripura</span>{' '}
               <span>Sundari</span>{' '}
-              <span className={styles.nameAccent}>Kids&rsquo; school</span>
+              <span className={styles.nameAccent}>Kids&rsquo; School</span>
             </h1>
 
             <p className={styles.tagline}>
