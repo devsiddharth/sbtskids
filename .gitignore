@@ -33,4 +33,10 @@ pnpm-debug.log*
 *.mov
 *.MOV
 
+# Smoke-test artifacts
+.smoke
+
+# Local capture artifacts (digital card screenshots)
+capture-card.cjs
+digital-visiting-card*.png
 

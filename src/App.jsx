@@ -11,6 +11,7 @@ const Admissions = lazy(() => import('./pages/Admissions/Admissions.jsx'))
 const Gallery = lazy(() => import('./pages/Gallery/Gallery.jsx'))
 const Safety = lazy(() => import('./pages/Safety/Safety.jsx'))
 const Contact = lazy(() => import('./pages/Contact/Contact.jsx'))
+const DigitalCard = lazy(() => import('./pages/DigitalCard/DigitalCard.jsx'))
 const NotFound = lazy(() => import('./pages/NotFound/NotFound.jsx'))
 
 /* Scroll to top on route change */
@@ -56,6 +57,7 @@ export default function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/safety" element={<Safety />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/digital-card" element={<DigitalCard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

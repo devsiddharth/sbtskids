@@ -36,7 +36,7 @@ export default function Navbar() {
     <header className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <nav className={`container ${styles.inner}`} aria-label="Main navigation">
         <Link to="/" className={styles.logoLink} aria-label={`${site.name} — home`}>
-          <Logo size={46} />
+          <Logo size={58} />
           <span className={styles.logoText}>
             <span className={styles.logoName}>{site.name}</span>
             <span className={styles.logoTag}>{site.tagline}</span>
@@ -94,7 +94,7 @@ export default function Navbar() {
               aria-label="Mobile menu"
             >
               <ul className={styles.drawerLinks}>
-                {navLinks.map((link) => (
+                {navLinks.map((link, i) => (
                   <motion.li
                     key={link.to}
                     initial={{ opacity: 0, x: 24 }}
