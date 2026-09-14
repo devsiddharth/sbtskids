@@ -76,6 +76,7 @@ export default function Hero() {
           </motion.span>
 
           <motion.h1 id="hero-title" className={styles.title} variants={fadeUp}>
+            <span className={styles.schoolName}>{site.fullName}</span>
             Where Little Smiles{' '}
             <span className={styles.titleGrad}>Learn to Shine</span>
           </motion.h1>

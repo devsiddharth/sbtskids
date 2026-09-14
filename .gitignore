@@ -38,5 +38,9 @@ pnpm-debug.log*
 
 # Local capture artifacts (digital card screenshots)
 capture-card.cjs
+capture-hero.cjs
 digital-visiting-card*.png
+Digital visiting card.png
+SBTS_Kids_School_Digital_Visiting_Card.pdf
+hero-check.png
 
