@@ -7,9 +7,15 @@
 export const site = {
   /* ✏️ School identity */
   name: 'SBTS Kids',
+  fullName: "Sri Balatripura Sundari Kids' school",
   shortName: 'SBTS',
   tagline: 'Where Little Smiles Learn to Shine',
+  motto: 'Nature · Study · Activity',
   established: 2022,
+
+  /* ✏️ Production website (used for the CTA & QR code) */
+  website: 'https://www.sbtskids.in/',
+  websiteLabel: 'www.sbtskids.in',
 
   /* ✏️ Contact details */
   phone: '+91 86394 59962',

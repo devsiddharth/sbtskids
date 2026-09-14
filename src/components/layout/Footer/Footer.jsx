@@ -38,7 +38,7 @@ export default function Footer() {
         {/* Brand */}
         <div className={styles.brand}>
           <div className={styles.logoRow}>
-            <Logo size={52} />
+            <Logo size={64} />
             <div>
               <p className={styles.name}>{site.name}</p>
               <p className={styles.tagline}>{site.tagline}</p>

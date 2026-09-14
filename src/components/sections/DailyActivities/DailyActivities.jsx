@@ -24,7 +24,7 @@ export default function DailyActivities() {
             const left = i % 2 === 0
             return (
               <motion.div
-                key={item.title}
+                key={`${item.time}-${item.title}`}
                 className={`${styles.row} ${left ? styles.rowLeft : styles.rowRight}`}
                 variants={stagger}
                 initial="hidden"
