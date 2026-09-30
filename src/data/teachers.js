@@ -18,7 +18,7 @@ export const teachers = [
     color: '#FFE3E5',
     intro:
       'She brings Telugu and music to life through engaging lessons, helping children discover the joy of language, rhythm and self-expression while growing with confidence.',
-    image: '/images/teachers/Manjusha.jpg',
+    image: '/images/teachers/Manjusha.jpeg',
   },
   {
     id: 'teacher-2',
